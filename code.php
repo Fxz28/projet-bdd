@@ -96,3 +96,81 @@ if (isset($_POST['save_absence'])) {
         echo $e;
     }
 }
+
+if (isset($_POST['save_horaire'])) {
+
+    if (isset($_POST["nameEmp"])) {
+        $nameEmp = $_POST["nameEmp"];
+    }
+    
+    if (isset($_POST["dateG"])) {
+        $dateG = $_POST["dateG"];
+    }
+    
+    
+    
+    if (isset($_POST["type"])) {
+        $type = $_POST["type"];
+    } 
+
+
+    try {
+        $query = "INSERT INTO `horaire`( `idEmp`, `dateG`, `Type`) VALUES ('$nameEmp','$dateG','$type')";
+        echo '<br>' . $query . '<br>';
+    
+        $conn->exec($query);
+    
+        if ($conn) {
+            header("Location: ListeHoraires.php");
+        }
+    } catch (exception $e) {
+        echo $e;
+    }
+}
+
+if (isset($_POST['save_stagiaires'])) {
+
+    
+    
+    if (isset($_POST["name"])) {
+        $name = $_POST["name"];
+    }
+    
+    if (isset($_POST["birthday"])) {
+        $birthday = $_POST["birthday"];
+    }
+    
+    if (isset($_POST["service"])) {
+        $service = $_POST["service"];
+    }
+
+    if (isset($_POST["dateD"])) {
+        $dateD = $_POST["dateD"];
+    }
+
+    if (isset($_POST["dateF"])) {
+        $dateF = $_POST["dateF"];
+    }
+    
+    if (isset($_POST["phone"])) {
+        $phone = $_POST["phone"];
+    }
+    
+    if (isset($_POST["email"])) {
+        $email = $_POST["email"];
+    }
+
+
+    try {
+        $query = "INSERT INTO `stagiaires`(`name`, `Birthday`, `service`, `dateD`, `dateF`, `Number`, `Email`) VALUES ('$name','$birthday',' $service','$dateD','$dateF',' $phone','$email')";
+        echo '<br>' . $query . '<br>';
+    
+        $conn->exec($query);
+    
+        if ($conn) {
+            header("Location: ListeStagiaires.php");
+        }
+    } catch (exception $e) {
+        echo $e;
+    }
+}

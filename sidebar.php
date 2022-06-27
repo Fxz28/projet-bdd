@@ -35,6 +35,30 @@
           Liste des absences
         </a>
       </li>
+      <li>
+        <a href="horaire.php" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          horaire de garde
+        </a>
+      </li>
+      <li>
+        <a href="ListeHoraires.php" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          Liste des horaires
+        </a>
+      </li>
+      <li class="nav-item">
+        <a href="addStage.php" class="nav-link text-white" aria-current="page">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+          Ajouter stagiare
+        </a>
+      </li>
+      <li>
+        <a href="ListeStagiaires.php" class="nav-link text-white">
+          <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+          Afficher stagiaires
+        </a>
+      </li>
       
     </ul>
     <hr>
